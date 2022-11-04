@@ -12,7 +12,7 @@ import org.slf4j.Logger;
 @Plugin(
         id = "justonemore",
         name = "JustOneMore",
-        version = "1.0.0",
+        version = "1.1.0",
         description = "JustOneMore plugin for Velocity",
         authors = {"xii69"}
 )
