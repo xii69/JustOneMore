@@ -1,0 +1,10 @@
+{
+  "id": "${slug}",
+  "name": "${name}",
+  "version": "${version}",
+  "description": "${description}",
+  "authors": [
+    "xii69"
+  ],
+  "main": "me.xii69.justonemore.JustOneMore"
+}
