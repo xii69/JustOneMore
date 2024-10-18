@@ -1,16 +1,15 @@
 package me.xii69.justonemore.bungee
 
-import me.xii69.justonemore.shared.Metrics.Factory
 import net.md_5.bungee.api.event.ProxyPingEvent
 import net.md_5.bungee.api.plugin.Listener
 import net.md_5.bungee.api.plugin.Plugin
 import net.md_5.bungee.event.EventHandler
 
-class JustOneMore(
-    private val metricsFactory: Factory
-) : Plugin(), Listener {
+class JustOneMore() : Plugin(), Listener {
+    private lateinit var metrics: Metrics
+
     override fun onEnable() {
-        metricsFactory.make(this, 22308)
+        metrics = Metrics(this, 23661)
         proxy.pluginManager.registerListener(this, this)
     }
 

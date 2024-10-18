@@ -5,13 +5,13 @@ import com.velocitypowered.api.event.PostOrder
 import com.velocitypowered.api.event.Subscribe
 import com.velocitypowered.api.event.proxy.ProxyInitializeEvent
 import com.velocitypowered.api.event.proxy.ProxyPingEvent
-import me.xii69.justonemore.shared.Metrics.Factory
+import me.xii69.justonemore.velocity.Metrics.Factory
 
 class JustOneMore @Inject constructor(
     private val metricsFactory: Factory
 ) {
     @Subscribe
-    fun onProxyInitialization(event: ProxyInitializeEvent) = metricsFactory.make(this, 22308)
+    fun onProxyInitialization(event: ProxyInitializeEvent) = metricsFactory.make(this, 23660)
 
     @Subscribe(order = PostOrder.LAST)
     fun onProxyPing(event: ProxyPingEvent) {
