@@ -15,7 +15,7 @@ If you have 69 players on your server, the max player count will automatically a
 
 # Need Help?
 
-If you encounter any issues, contact me on Discord: xii69
+If you encounter any issues, contact me on Discord: https://discord.gg/YHGYJnqPma
 
 # YourKit
 
