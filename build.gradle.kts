@@ -31,7 +31,7 @@ kotlin {
 
 tasks {
     processResources {
-        filesMatching(listOf("**plugin.yml", "**plugin.json, **bungee.yml")) {
+        filesMatching(listOf("plugin.yml", "bungee.yml", "velocity-plugin.json")) {
             expand(
                 "name" to rootProject.name,
                 "version" to version,
