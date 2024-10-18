@@ -1,28 +1,19 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    kotlin("jvm") version "2.0.21"
+    id("com.gradleup.shadow") version "8.3.3"
 }
 
 group = "me.xii69"
-version = "2.0.0"
+version = "2.0.1"
 val slug = "justonemore"
 
 repositories {
     mavenCentral()
-    maven {
-        name = "papermc"
-        url = uri("https://repo.papermc.io/repository/maven-public/")
-    }
-    maven {
-        name = "jitpack.io"
-        url = uri("https://jitpack.io")
-    }
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
-    compileOnly("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")
-    annotationProcessor("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")
-    compileOnly("com.github.LeonMangler:PremiumVanishAPI:2.9.0-4")
+    compileOnly("com.velocitypowered:velocity-api:3.4.0-SNAPSHOT")
 }
 
 kotlin {
