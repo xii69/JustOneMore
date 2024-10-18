@@ -4,7 +4,7 @@
   "version": "${version}",
   "description": "${description}",
   "authors": [
-    "xii69"
+    "${author}"
   ],
-  "main": "me.xii69.justonemore.JustOneMore"
+  "main": "${velocityMain}"
 }

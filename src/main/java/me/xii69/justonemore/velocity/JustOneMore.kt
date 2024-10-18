@@ -1,11 +1,11 @@
-package me.xii69.justonemore
+package me.xii69.justonemore.velocity
 
 import com.google.inject.Inject
 import com.velocitypowered.api.event.PostOrder
 import com.velocitypowered.api.event.Subscribe
 import com.velocitypowered.api.event.proxy.ProxyInitializeEvent
 import com.velocitypowered.api.event.proxy.ProxyPingEvent
-import me.xii69.justonemore.Metrics.Factory
+import me.xii69.justonemore.shared.Metrics.Factory
 
 class JustOneMore @Inject constructor(
     private val metricsFactory: Factory

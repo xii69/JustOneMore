@@ -1,4 +1,4 @@
-package me.xii69.justonemore;
+package me.xii69.justonemore.shared;
 
 import com.google.inject.Inject;
 import com.velocitypowered.api.plugin.PluginContainer;
