@@ -9,7 +9,7 @@ description = "JustOneMore"
 val author = "xii69"
 val slug = "justonemore"
 val bukkitMain = "me.xii69.justonemore.bukkit.JustOneMore"
-val bungeeMain = "me.xii69.justonemore.bungeecord.JustOneMore"
+val bungeeMain = "me.xii69.justonemore.bungee.JustOneMore"
 val velocityMain = "me.xii69.justonemore.velocity.JustOneMore"
 
 repositories {
