@@ -15,5 +15,7 @@ class JustOneMore() : JavaPlugin(), Listener {
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
-    fun onServerListPing(event: ServerListPingEvent) = event.apply { maxPlayers = numPlayers + 1 }
+    fun onServerListPing(event: ServerListPingEvent) {
+        event.apply { maxPlayers = numPlayers + 1 }
+    }
 }

@@ -1,13 +1,14 @@
 plugins {
-    kotlin("jvm") version "2.0.21"
-    id("com.gradleup.shadow") version "8.3.3"
+    kotlin("jvm") version "2.4.20"
+    id("com.gradleup.shadow") version "9.6.1"
 }
 
 group = "me.xii69"
-version = "3.0.0"
+version = "3.0.1"
 description = "JustOneMore"
 val author = "xii69"
-val slug = "justonemore"
+val projectId = "justonemore"
+val projectName = "JustOneMore"
 val bukkitMain = "me.xii69.justonemore.bukkit.JustOneMore"
 val bungeeMain = "me.xii69.justonemore.bungee.JustOneMore"
 val velocityMain = "me.xii69.justonemore.velocity.JustOneMore"
@@ -20,27 +21,27 @@ repositories {
 }
 
 dependencies {
-    compileOnly("net.md-5:bungeecord-api:1.19-R0.1-SNAPSHOT")
-    compileOnly("org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT")
-    compileOnly("com.velocitypowered:velocity-api:3.4.0-SNAPSHOT")
+    compileOnly("net.md-5:bungeecord-api:1.21-R0.5-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:26.3-R0.1-SNAPSHOT")
+    compileOnly("com.velocitypowered:velocity-api:4.1.2-SNAPSHOT")
 }
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(25)
 }
 
 tasks {
     processResources {
         filesMatching(listOf("plugin.yml", "bungee.yml", "velocity-plugin.json")) {
             expand(
-                "name" to rootProject.name,
+                "name" to projectName,
                 "version" to version,
                 "author" to author,
-                "slug" to slug,
+                "projectId" to projectId,
                 "bukkitMain" to bukkitMain,
                 "bungeeMain" to bungeeMain,
                 "velocityMain" to velocityMain,
-                "description" to rootProject.description
+                "description" to projectName,
             )
         }
     }

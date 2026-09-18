@@ -11,10 +11,14 @@ class JustOneMore @Inject constructor(
     private val metricsFactory: Factory
 ) {
     @Subscribe
-    fun onProxyInitialization(event: ProxyInitializeEvent) = metricsFactory.make(this, 23660)
+    fun onProxyInitialization(event: ProxyInitializeEvent) {
+        metricsFactory.make(this, 23660)
+    }
 
     @Subscribe(order = PostOrder.LAST)
     fun onProxyPing(event: ProxyPingEvent) {
-        if (event.ping.players.isPresent) event.ping = event.ping.asBuilder().maximumPlayers(event.ping.asBuilder().onlinePlayers + 1).build()
+        if (event.ping.players.isPresent) {
+            event.ping = event.ping.asBuilder().maximumPlayers(event.ping.asBuilder().onlinePlayers + 1).build()
+        }
     }
 }

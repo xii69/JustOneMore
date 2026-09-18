@@ -14,5 +14,7 @@ class JustOneMore() : Plugin(), Listener {
     }
 
     @EventHandler(priority = Byte.MAX_VALUE)
-    fun onProxyPing(event: ProxyPingEvent) = event.response.players.apply { max = online + 1 }
+    fun onProxyPing(event: ProxyPingEvent) {
+        event.response.players.apply { max = online + 1 }
+    }
 }
